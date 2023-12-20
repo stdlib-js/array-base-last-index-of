@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/array-base-last-index-of",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Return the index of the last element which equals a provided search element.",
   "license": "Apache-2.0",
   "author": {
