@@ -52,6 +52,11 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import lastIndexOf from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-last-index-of@deno/mod.js';
+```
+The previous example will load the latest bundled code from the deno branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/array-base-last-index-of/tags). For example,
+
+```javascript
 import lastIndexOf from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-last-index-of@v0.2.0-deno/mod.js';
 ```
 
@@ -138,7 +143,7 @@ idx = lastIndexOf( x, NaN, 5, true );
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-import lastIndexOf from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-last-index-of@v0.2.0-deno/mod.js';
+import lastIndexOf from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-last-index-of@deno/mod.js';
 
 var x = [ 'foo', 'bar', 'beep', 'boop', 'foo', 'bar' ];
 
