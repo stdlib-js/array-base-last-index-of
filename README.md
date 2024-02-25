@@ -52,7 +52,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import lastIndexOf from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-last-index-of@esm/index.mjs';
+import lastIndexOf from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-last-index-of@v0.2.1-esm/index.mjs';
 ```
 
 #### lastIndexOf( x, searchElement, fromIndex, equalNaNs )
@@ -143,7 +143,7 @@ idx = lastIndexOf( x, NaN, 5, true );
 <body>
 <script type="module">
 
-import lastIndexOf from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-last-index-of@esm/index.mjs';
+import lastIndexOf from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-last-index-of@v0.2.1-esm/index.mjs';
 
 var x = [ 'foo', 'bar', 'beep', 'boop', 'foo', 'bar' ];
 
