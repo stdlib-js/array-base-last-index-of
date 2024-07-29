@@ -52,6 +52,11 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import lastIndexOf from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-last-index-of@esm/index.mjs';
+```
+The previous example will load the latest bundled code from the esm branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/array-base-last-index-of/tags). For example,
+
+```javascript
 import lastIndexOf from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-last-index-of@v0.2.2-esm/index.mjs';
 ```
 
@@ -143,7 +148,7 @@ idx = lastIndexOf( x, NaN, 5, true );
 <body>
 <script type="module">
 
-import lastIndexOf from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-last-index-of@v0.2.2-esm/index.mjs';
+import lastIndexOf from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-last-index-of@esm/index.mjs';
 
 var x = [ 'foo', 'bar', 'beep', 'boop', 'foo', 'bar' ];
 
