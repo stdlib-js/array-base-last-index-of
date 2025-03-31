@@ -2,6 +2,109 @@
 
 > Package changelog.
 
+<section class="release" id="unreleased">
+
+## Unreleased (2025-03-31)
+
+<section class="features">
+
+### Features
+
+-   [`82ee31f`](https://github.com/stdlib-js/stdlib/commit/82ee31f3193dc0854b0767ddf9e9effed62ba878) - remove `equalNaNs` support
+
+</section>
+
+<!-- /.features -->
+
+<section class="breaking-changes">
+
+### BREAKING CHANGES
+
+-   [`82ee31f`](https://github.com/stdlib-js/stdlib/commit/82ee31f3193dc0854b0767ddf9e9effed62ba878): remove `equalNaNs` support
+
+    -   To migrate, users should use `array/base/last-index-of-same-value`
+        which treats `NaN` values as equal.
+        ---
+        type: pre_commit_static_analysis_report
+        description: Results of running static analysis checks when committing changes.
+        report:
+          - task: lint_filenames
+            status: passed
+          - task: lint_editorconfig
+            status: passed
+          - task: lint_markdown
+            status: passed
+          - task: lint_package_json
+            status: na
+          - task: lint_repl_help
+            status: passed
+          - task: lint_javascript_src
+            status: passed
+          - task: lint_javascript_cli
+            status: na
+          - task: lint_javascript_examples
+            status: passed
+          - task: lint_javascript_tests
+            status: passed
+          - task: lint_javascript_benchmarks
+            status: passed
+          - task: lint_python
+            status: na
+          - task: lint_r
+            status: na
+          - task: lint_c_src
+            status: na
+          - task: lint_c_examples
+            status: na
+          - task: lint_c_benchmarks
+            status: na
+          - task: lint_c_tests_fixtures
+            status: na
+          - task: lint_shell
+            status: na
+          - task: lint_typescript_declarations
+            status: passed
+          - task: lint_typescript_tests
+            status: passed
+          - task: lint_license_headers
+            status: passed
+        ---
+
+</section>
+
+<!-- /.breaking-changes -->
+
+<section class="commits">
+
+### Commits
+
+<details>
+
+-   [`fc42bf4`](https://github.com/stdlib-js/stdlib/commit/fc42bf4cdb21378b8df742abba7eebcc506bfc4b) - **refactor:** use more generic types _(by Athan Reines)_
+-   [`82ee31f`](https://github.com/stdlib-js/stdlib/commit/82ee31f3193dc0854b0767ddf9e9effed62ba878) - **feat:** remove `equalNaNs` support _(by Athan Reines)_
+
+</details>
+
+</section>
+
+<!-- /.commits -->
+
+<section class="contributors">
+
+### Contributors
+
+A total of 1 person contributed to this release. Thank you to this contributor:
+
+-   Athan Reines
+
+</section>
+
+<!-- /.contributors -->
+
+</section>
+
+<!-- /.release -->
+
 <section class="release" id="v0.2.2">
 
 ## 0.2.2 (2024-07-29)
