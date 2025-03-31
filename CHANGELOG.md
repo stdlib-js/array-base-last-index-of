@@ -80,6 +80,7 @@
 
 <details>
 
+-   [`f57b1c2`](https://github.com/stdlib-js/stdlib/commit/f57b1c262867fcaa6dc94b1ce64ab36c619b91a8) - **refactor:** reduce overhead by using specialized utilities _(by Athan Reines)_
 -   [`fc42bf4`](https://github.com/stdlib-js/stdlib/commit/fc42bf4cdb21378b8df742abba7eebcc506bfc4b) - **refactor:** use more generic types _(by Athan Reines)_
 -   [`82ee31f`](https://github.com/stdlib-js/stdlib/commit/82ee31f3193dc0854b0767ddf9e9effed62ba878) - **feat:** remove `equalNaNs` support _(by Athan Reines)_
 
