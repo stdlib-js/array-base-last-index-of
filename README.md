@@ -45,24 +45,42 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/array-base-last-index-of
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import lastIndexOf from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-last-index-of@deno/mod.js';
+var lastIndexOf = require( '@stdlib/array-base-last-index-of' );
 ```
 
-#### lastIndexOf( x, searchElement, fromIndex, equalNaNs )
+#### lastIndexOf( x, searchElement, fromIndex )
 
 Returns the index of the last element which equals a provided search element.
 
 ```javascript
 var x = [ 1, 2, 3, 4, 5, 6 ];
 
-var idx = lastIndexOf( x, 3, 5, false );
+var idx = lastIndexOf( x, 3, 5 );
 // returns 2
 ```
 
@@ -71,7 +89,7 @@ If the function is unable to find an element which equals a provided search elem
 ```javascript
 var x = [ 1, 2, 3, 4, 5, 6 ];
 
-var idx = lastIndexOf( x, 7, 5, false );
+var idx = lastIndexOf( x, 7, 5 );
 // returns -1
 ```
 
@@ -80,7 +98,7 @@ To begin searching from a specific index, provide a corresponding `fromIndex` ar
 ```javascript
 var x = [ 1, 1, 2, 1, 2, 3, 3 ];
 
-var idx = lastIndexOf( x, 2, 3, false );
+var idx = lastIndexOf( x, 2, 3 );
 // returns 2
 ```
 
@@ -89,20 +107,8 @@ If `fromIndex` is less than zero, the starting index is resolved relative to the
 ```javascript
 var x = [ 1, 1, 2, 1, 2, 3, 3 ];
 
-var idx = lastIndexOf( x, 2, -4, false );
+var idx = lastIndexOf( x, 2, -4 );
 // returns 2
-```
-
-When searching for a search element, the function checks for strict equality. As a consequence, `NaN` values are considered distinct. In order to resolve the last element which is `NaN`, set the `equalNaNs` argument to `true`.
-
-```javascript
-var x = [ 1, 2, 3, NaN, 5, 6 ];
-
-var idx = lastIndexOf( x, NaN, 5, false );
-// returns -1
-
-idx = lastIndexOf( x, NaN, 5, true );
-// returns 3
 ```
 
 </section>
@@ -117,13 +123,15 @@ idx = lastIndexOf( x, NaN, 5, true );
 
 -   The function scans an input array from the starting index to the beginning of the array (i.e., backward).
 
--   If provided an array-like object having a `lastIndexOf` method and `equalNaNs` is `false`, the function defers execution to that method and assumes that the method API has the following signature:
+-   If provided an array-like object having a `lastIndexOf` method, the function defers execution to that method and assumes that the method API has the following signature:
 
     ```text
     x.lastIndexOf( searchElement, fromIndex )
     ```
 
--   If provided an array-like object without a `lastIndexOf` method or if `equalNaNs` is `true`, the function performs a linear scan and returns immediately upon finding a match.
+-   If provided an array-like object without a `lastIndexOf` method, the function performs a linear scan and returns immediately upon finding a match.
+
+-   When searching for a search element, the function checks for equality using the strict equality operator `===`. As a consequence, `NaN` values are considered distinct, and `-0` and `+0` are considered the same.
 
 </section>
 
@@ -138,23 +146,23 @@ idx = lastIndexOf( x, NaN, 5, true );
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-import lastIndexOf from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-last-index-of@deno/mod.js';
+var lastIndexOf = require( '@stdlib/array-base-last-index-of' );
 
 var x = [ 'foo', 'bar', 'beep', 'boop', 'foo', 'bar' ];
 
-var idx = lastIndexOf( x, 'beep', 5, false );
+var idx = lastIndexOf( x, 'beep', 5 );
 // returns 2
 
-idx = lastIndexOf( x, 'bop', 5, false );
+idx = lastIndexOf( x, 'bop', 5 );
 // returns -1
 
-idx = lastIndexOf( x, 'foo', 5, false );
+idx = lastIndexOf( x, 'foo', 5 );
 // returns 4
 
-idx = lastIndexOf( x, 'foo', -3, false );
+idx = lastIndexOf( x, 'foo', -3 );
 // returns 0
 
-idx = lastIndexOf( x, 'foo', -50, false );
+idx = lastIndexOf( x, 'foo', -50 );
 // returns -1
 ```
 
@@ -187,7 +195,7 @@ idx = lastIndexOf( x, 'foo', -50, false );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
